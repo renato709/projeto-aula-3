@@ -1,59 +1,91 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-    <head>
-        <meta charset="UTF-8">
-        <title>Contato - kizuna</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <span id="topo"></span>
-        <header>
-            <h1>Reserva- Kizuna</h1>
-            <p>
-                <a href="inicio.html" class="botao-link">Sobre</a> |
-                <a href="contato.html" class="botao-link">Reserva</a> |
-                <a href="serviços.html" class="botao-link">Valores</a> 
-            </p>              
-        </header>
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Tribus Açaí - A melhor experiência de açaí da cidade" />
+  <title>Tribus Açaí - O Melhor Açaí da Cidade</title>
 
-        <main>
-            <h2>Entre em Contato</h2>
-            <p>Preencha o formulário abaixo que retornaremos em breve:</p>
-            <label for>Nome Completo:</label><br>
-                <input type="text">
-                <form action="#" method="post"></form>
+  <!-- Link para CSS externo -->
+  <link rel="stylesheet" href="styles.css">
 
-            <br><label for>E-mail:</label><br>
-                <input type="email">
-                <form action="#" method="post"></form>
+  <!-- Fonte (opcional) -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <h1>Tribus Açaí</h1>
+    </div>
 
-            <br><label for>Quantidade de pessoas:</label><br>
-                <input type="text">
-                <form action="#" method="post"></form>
+    <nav class="menu" aria-label="Navegação principal">
+      <ul>
+        <li><a href="#inicio">Início</a></li>
+        <li><a href="#cardapio" id="btnCardapio">Cardápio</a></li>
+        <li><a href="#lojas">Lojas</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
 
-            <br><label for>Horário de chegada desejado:</label><br>
-                <input type="time">
-                <form action="#" method="post"></form>
+    <img id="foto-destaque"
+         src="assets/tribus_acai_logo.png"
+         alt="Logo Tribus Açaí"
+         width="120" height="120"
+         loading="lazy">
+  </header>
 
-            <br><label for>telefone:</label><br>
-                <input type="tel">
-            
-            <br><input type="button" value="Enviar" ><br>
-            <div>
-                <button>Botão</button>
-            </div>
-        </main>
+  <main>
+    <section id="inicio" class="hero" aria-labelledby="hero-title">
+      <form class="welcome-form" onsubmit="return false;" aria-label="Formulário de boas-vindas">
+        <label for="nome-usuario">Digite seu nome</label>
+        <input id="nome-usuario" name="nome-usuario" type="text" placeholder="Digite seu nome" />
+      </form>
+      <p id="mensagem" aria-live="polite"></p>
 
-        <footer>
-            <p><strong>Contato</strong>: <a href="mailto:kizuna@gmail.com">kizuna@gmail.com</a>
-            | (61)93978-0474</p>
-            <p>Segunda a Quinta - 11h30 às 15h30 / 18h às 0h 
+      <h2 id="hero-title">A Melhor Experiência de Açaí</h2>
+      <p>Açaí natural, cremoso e com os melhores acompanhamentos.</p>
+      <a href="#cardapio" class="btn-cardapio">Ver Cardápio</a>
+    </section>
 
-Sexta e sábado - 11h30 às 01h 
+    <section id="cardapio" class="cardapio" aria-labelledby="cardapio-title">
+      <h2 id="cardapio-title">Nosso Cardápio Delicioso</h2>
 
-Domingo - 11h30 às 22h30</p>
-<p>@ 2025 Bathish. Todos os direitos reservados <a href="#topo">Voltar ao inicio</a></p>
-        </footer>
+      <article class="item-cardapio" aria-labelledby="tradicional-title">
+        <h3 id="tradicional-title">Açaí Tradicional</h3>
+        <p>Açaí puro na tigela, escolha o tamanho.</p>
+        <ul>
+          <li>P (300ml) 3 Complementos - R$ 11,99</li>
+          <li>M (500ml) 5 Complementos - R$ 17,99</li>
+          <li>G (700ml) 7 Complementos - R$ 24,99</li>
+        </ul>
+      </article>
 
-    </body>
+      <!-- ... demais itens (omitidos para brevidade) ... -->
+
+    </section>
+
+    <section id="lojas" class="lojas" aria-labelledby="lojas-title">
+      <h2 id="lojas-title">Onde Estamos</h2>
+      <div class="unidade" role="region" aria-labelledby="unidade-centro">
+        <h3 id="unidade-centro">Unidade Centro</h3>
+        <p>Rua Exemplo, 123 - Centro</p>
+        <p>Segunda a Sábado: 10h às 22h</p>
+      </div>
+
+      <div class="unidade" role="region" aria-labelledby="unidade-shopping">
+        <h3 id="unidade-shopping">Unidade Shopping</h3>
+        <p>Av. Principal, Loja 45 - Shopping X</p>
+        <p>Todos os dias: 11h às 23h</p>
+      </div>
+    </section>
+  </main>
+
+  <footer id="contato" role="contentinfo">
+    <p>&copy; 2025 Tribus Açaí. Todos os direitos reservados.</p>
+    <p>Contato: (99) 99999-9999 | <a href="mailto:TribusAcai@gmail.com.br">TribusAcai@gmail.com.br</a></p>
+  </footer>
+
+  <script src="app.js" defer></script>
+</body>
 </html>
